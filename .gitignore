@@ -1,0 +1,5 @@
+/.project
+/.includepath
+/.build/*
+/Dist-Zilla-Plugin-CopyMeta*
+/dist-zilla-plugin-copymeta*

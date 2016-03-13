@@ -1,0 +1,12 @@
+Source: libdist-zilla-plugin-copymeta-perl
+Section: perl
+Priority: extra
+Maintainer: Igor Sverdlov <igor-sverdlov@mail.ru>
+Build-Depends: debhelper (>= 8.0.0), libmoose-perl, libdist-zilla-perl
+Standards-Version: 3.9.4
+
+Package: libdist-zilla-plugin-copymeta-perl
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${perl:Depends}, libmoose-perl, libdist-zilla-perl 
+Description: Package copy META files.
+ Package copy files: Changes LICENSE README META.yml Makefile.PL MANIFEST.
