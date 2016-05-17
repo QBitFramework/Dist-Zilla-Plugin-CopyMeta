@@ -1,3 +1,9 @@
+libdist-zilla-plugin-copymeta-perl (0.002) raring; urgency=low
+
+  * copy files
+
+ -- Igor Sverdlov <igor-sverdlov@mail.ru>  Wed, 18 May 2016 00:36:49 +0300
+
 libdist-zilla-plugin-copymeta-perl (0.001) raring; urgency=low
 
   * fix readme
