@@ -6,13 +6,21 @@ with 'Dist::Zilla::Role::BeforeRelease';
 use namespace::autoclean;
 use File::Copy;
 
+has 'files' => (
+    is       => 'ro',
+    isa      => 'ArrayRef[Str]',
+    required => 1,
+);
+
+sub mvp_multivalue_args {qw( files )}
+
 sub before_release {
     my ($self) = @_;
 
     my $dir = $self->zilla->dist_basename;
 
-    foreach (qw(Changes LICENSE README META.yml Makefile.PL MANIFEST)) {
-        copy("$dir/$_", $_) or die "Copy failed: $!";
+    foreach (@{$self->files}) {
+        copy("$dir/$_", $_) or die "Copy failed: $_\n";
     }
 }
 
